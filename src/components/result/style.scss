@@ -1,0 +1,130 @@
+#result{
+
+  .picto{
+
+    &:before {
+      @include weather-icons-font;
+
+      font-size: 8em;
+      margin: auto;
+    }
+  }
+
+  > div {
+    display : flex;
+    margin-top : $medium-space;
+
+    > section {
+      flex : 1;
+
+      &:first-child{
+        text-align : right;
+        padding-right : $medium-space;
+      }
+
+      &:last-child{
+        text-align : left;
+        padding-left: $medium-space;
+      }
+    }
+  }
+
+  .sunrise {
+    span:before {
+      content : '\f051';
+    }
+  }
+
+  .sunset {
+    span:before {
+      content: '\f0c9';
+    }
+  }
+
+  .sunrise, .sunset{
+    span:before {
+      @include weather-icons-font;
+      font-size: 1.5em;
+      vertical-align: middle;
+      margin : 0 0.5em;
+    }
+  }
+
+  .sunrise, .sunset, .temperature, .humidity {
+    display : inline-block;
+  }
+
+  &.thunderstorm{
+    .picto:before{
+      content : '\f01d';
+    }
+  }
+
+  &.drizzle{
+    .picto:before{
+      content : '\f021';
+    }
+  }
+
+  &.rain{
+    .picto:before{
+      content : '\f019';
+    }
+  }
+
+  &.snow{
+    .picto:before{
+      content : '\f01b';
+    }
+  }
+
+  &.clear{
+    .picto:before{
+      content : '\f00d';
+    }
+  }
+
+  &.clouds{
+    .picto:before{
+      content : '\f041';
+    }
+  }
+
+  &.extreme{
+    .picto:before{
+      content : '\f01e';
+    }
+  }
+
+  .temperature, .humidity {
+    font-size : 3rem;
+    vertical-align: middle;
+
+    div {
+      font-size : 1rem;
+      padding-top : $small-space;
+    }
+  }
+
+  .temperature {
+    border-right: 1px solid white;
+
+    &:after {
+      @include weather-icons-font;
+      content : '\f03c';
+      vertical-align: middle;
+    }
+  }
+
+  .humidity {
+
+    &:after {
+      @include weather-icons-font;
+      content : '\f07a';
+      font-size: 0.6em;
+      top: -4px;
+      position: relative;
+      vertical-align: middle;
+    }
+  }
+}

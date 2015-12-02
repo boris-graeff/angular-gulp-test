@@ -1,0 +1,8 @@
+@mixin weather-icons-font {
+  display : inline-block;
+  font-family : weathericons;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+}

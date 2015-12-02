@@ -1,0 +1,33 @@
+#home {
+
+  h2 {
+    margin-bottom : 0;
+
+    + div{
+      font-size : 1rem;
+      margin-bottom : $small-space;
+    }
+  }
+
+  input[type=text], a{
+    padding : $small-space $medium-space;
+    border : 0;
+    color : $black;
+    display : inline-block;
+    vertical-align: middle;
+    line-height : 1.5rem;
+    font-size : 1rem;
+  }
+
+  a {
+    text-decoration : none;
+    background : $yellow-dark;
+    font-weight : bold;
+    cursor : pointer;
+    transition : background $anim-duration;
+
+    &:hover {
+      background : $yellow-light;
+    }
+  }
+}

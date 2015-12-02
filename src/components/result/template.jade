@@ -1,0 +1,23 @@
+section#result(ng-class="result.weather.key")
+    h2 {{result.location}}
+    .picto
+
+    h3 {{result.weather.description}}
+
+    div
+        section.sunrise
+            | {{ 'result_sunrise' | translate }}
+            span
+            | {{result.weather.sunrise}}
+        section.sunset
+            | {{result.weather.sunset}}
+            span
+            | {{ 'result_sunset' | translate }}
+
+    div
+        section.temperature
+            div {{ 'result_temperature' | translate }}
+            | {{result.weather.temperature}}
+        section.humidity
+            div {{ 'result_humidity' | translate }}
+            | {{result.weather.humidity}}

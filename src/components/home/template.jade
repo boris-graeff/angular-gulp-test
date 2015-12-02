@@ -1,0 +1,6 @@
+section#home
+    h2 {{ 'home_title' | translate }}
+    div {{ 'home_subtitle' | translate }}
+    p
+        input#city(type='text', ng-model='home.location')
+        a#do-search(href='#result/{{home.location}}') {{ 'home_button_action' | translate }}
