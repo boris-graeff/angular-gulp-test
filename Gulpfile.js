@@ -1,12 +1,10 @@
 var gulp = require('gulp'),
-    buffer = require('vinyl-buffer'),
     gutil = require('gulp-util'),
     autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
-    source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
     jade = require('gulp-jade'),
     concat = require('gulp-concat'),
@@ -143,10 +141,6 @@ gulp.task('browserSync', function() {
         }
     })
 });
-
-
-
-/* TASKS */
 
 // Package task
 
